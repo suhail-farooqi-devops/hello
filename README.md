@@ -70,6 +70,41 @@ objPerson.PrintName(objPerson.FirstName, objPerson.LastName);
 - **Framework**: .NET 10.0
 - **Output Type**: Console Application
 
+## Architecture
+
+This project follows a simple object-oriented design:
+
+- `Person`: Base class containing common person properties and `PrintName()`.
+- `Employee`: Inherits from `Person` and adds a `Department` property.
+- `Department`: Represents an organizational unit referenced by `Employee`.
+
+The relationships are illustrated below (Mermaid):
+
+```mermaid
+classDiagram
+    class Person {
+        +int Id
+        +string? FirstName
+        +string? LastName
+        +PrintName()
+    }
+
+    class Employee {
+        +Department? Department
+        +PrintEmployeeWithDepartment()
+    }
+
+    class Department {
+        +int Id
+        +string? Name
+    }
+
+    Person <|-- Employee
+    Employee --> Department : "has a"
+```
+
+Use `Employee.PrintEmployeeWithDepartment()` to print the employee name with their department.
+
 ## License
 
 This project is open source and available under the MIT License.
