@@ -10,4 +10,3 @@ var objPerson = new Person
 };
 
 objPerson.PrintName(objPerson.FirstName, objPerson.LastName);
-
