@@ -9,5 +9,5 @@ var objPerson = new Person
     LastName = "Farooqi"
 };
 
-Console.WriteLine($"Hello {objPerson.FirstName} {objPerson.LastName}.");
+objPerson.PrintName(objPerson.FirstName, objPerson.LastName);
 
