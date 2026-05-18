@@ -23,5 +23,4 @@ var objEmployee = new Employee
     Department = objDepartment
 };
 
-// objEmployee.PrintName(objEmployee.FirstName, objEmployee.LastName);
 objEmployee.PrintEmployeeWithDepartment();
