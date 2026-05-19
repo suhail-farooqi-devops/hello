@@ -12,7 +12,7 @@
 var objDepartment = new Department
 {
     Id = 1,
-    Name = "IT"
+    Name = "Information Technology"
 };
 
 var objEmployee = new Employee
@@ -23,4 +23,4 @@ var objEmployee = new Employee
     Department = objDepartment
 };
 
-objEmployee.PrintEmployeeWithDepartment();
+objEmployee.PrintGreetings(objEmployee.FirstName, objEmployee.LastName);

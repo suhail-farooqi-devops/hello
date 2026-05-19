@@ -4,11 +4,10 @@ namespace hello
     {
         public Department? Department { get; set; }
 
-        public void PrintEmployeeWithDepartment()
+        public override void PrintGreetings(string firstName, string lastName)
         {
-            var deptName = Department?.Name ?? "(No Department)";
-            Console.WriteLine($"Hello {FirstName} {LastName} you are in '{deptName}' department.");
+            var deptName = Department?.Name ?? "No department assigned";
+            Console.WriteLine($"Welcome valued employee {firstName} {lastName}! You work in the '{deptName}' department.");
         }
     }
-
 }

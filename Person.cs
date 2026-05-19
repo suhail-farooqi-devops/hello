@@ -6,7 +6,7 @@ namespace hello
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
 
-        public void PrintName(string firstName, string lastName)
+        public virtual void PrintGreetings(string firstName, string lastName)
         {
             Console.WriteLine($"Hello {firstName} {lastName}.");
         }
